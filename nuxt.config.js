@@ -54,9 +54,40 @@ export default {
   */
   modules: [
     // Doc: https://http.nuxtjs.org
-    '@nuxt/http'
-  ],
+    '@nuxt/http',
+    '@nuxtjs/i18n',
 
+  ],
+  i18n: {
+    locales: [
+  
+      {
+        code: "en",
+        name: "English",
+        dir: "ltr",
+        iso: "en-US",
+      },
+    
+    ],
+    vueI18nLoader: true,
+    vueI18n: {
+      fallbackLocale: "en",
+    },
+    defaultLocale: "en",
+    detectBrowserLanguage: {
+      alwaysRedirect: true,
+      fallbackLocale: "",
+      redirectOn: "root",
+      useCookie: true,
+      cookieDomain: null,
+      cookieKey: "lang",
+      cookieSecure: true,
+      cookieCrossOrigin: true
+
+    },
+
+    addSeoAttributes: true,
+  },
   /*
   ** Server Middleware
   */

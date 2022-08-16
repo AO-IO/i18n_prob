@@ -41,10 +41,15 @@
 <script>
 export default {
   async asyncData ({ $http }) {
-    const test = await $http.$get('/api/test')
+ try{
+     const test = await $http.$get('/api/gg')
     return {
       test
     }
+ }catch(e){
+
+  console.log(e)
+ }
   }
 }
 </script>
